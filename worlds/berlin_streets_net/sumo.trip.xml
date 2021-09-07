@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- generated on 2021-08-31 15:39:26.065351 by $Id: randomTrips.py 23999 2017-04-21 09:04:47Z behrisch $
+  options: -n /home/mcitir/webots_ws/new_project/worlds/map_net/sumo.net.xml -o /home/mcitir/webots_ws/new_project/worlds/map_net/sumo.trip.xml -e 10
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <trip id="0" depart="0.00" from="109902441_1" to="24997595_2"/>
+    <trip id="1" depart="1.00" from="292429056_1" to="-24997595_1"/>
+    <trip id="2" depart="2.00" from="-168935757_2" to="4588219_3"/>
+    <trip id="3" depart="3.00" from="375935044" to="47755711_2"/>
+    <trip id="4" depart="4.00" from="4588222_1" to="191556835"/>
+    <trip id="5" depart="5.00" from="168935756" to="375935041"/>
+    <trip id="6" depart="6.00" from="23755739" to="622088433"/>
+    <trip id="7" depart="7.00" from="47707170" to="109902441_1"/>
+    <trip id="8" depart="8.00" from="4588219_3" to="109902441_1"/>
+    <trip id="9" depart="9.00" from="-292429056_2" to="-24997595_2"/>
+</routes>

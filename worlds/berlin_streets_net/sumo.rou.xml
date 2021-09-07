@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Tue Aug 31 15:39:49 2021 by SUMO duarouter Version 0.30.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/mcitir/webots_ws/new_project/worlds/map_net/sumo.net.xml"/>
+        <trip-files value="/home/mcitir/webots_ws/new_project/worlds/map_net/sumo.trip.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/mcitir/webots_ws/new_project/worlds/map_net/sumo.rou.xml"/>
+    </output>
+
+    <processing>
+        <ignore-errors value="true"/>
+    </processing>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="SUMO_Vehicle0" depart="0.00">
+        <route edges="109902441_1 753316506 168935757_1 -47755711_2 -47755711_1 47707171 -24997595_2 24997595_2"/>
+    </vehicle>
+    <vehicle id="SUMO_Vehicle1" depart="2.00">
+        <route edges="-168935757_2 -168935757_1 753316505 4588219_1 4588219_2 4588219_3"/>
+    </vehicle>
+    <vehicle id="SUMO_Vehicle2" depart="3.00">
+        <route edges="375935044 474362277 375935041 -4588222_1 168935757_1 -47755711_2 47755711_2"/>
+    </vehicle>
+</routes>

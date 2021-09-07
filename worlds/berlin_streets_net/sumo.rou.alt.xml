@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Tue Aug 31 15:39:49 2021 by SUMO duarouter Version 0.30.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/mcitir/webots_ws/new_project/worlds/map_net/sumo.net.xml"/>
+        <trip-files value="/home/mcitir/webots_ws/new_project/worlds/map_net/sumo.trip.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/mcitir/webots_ws/new_project/worlds/map_net/sumo.rou.xml"/>
+    </output>
+
+    <processing>
+        <ignore-errors value="true"/>
+    </processing>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="veh0" depart="0.00">
+        <routeDistribution last="0">
+            <route cost="34.77" probability="1.00000000" edges="109902441_1 753316506 168935757_1 -47755711_2 -47755711_1 47707171 -24997595_2 24997595_2"/>
+        </routeDistribution>
+    </vehicle>
+    <vehicle id="veh1" depart="2.00">
+        <routeDistribution last="0">
+            <route cost="30.15" probability="1.00000000" edges="-168935757_2 -168935757_1 753316505 4588219_1 4588219_2 4588219_3"/>
+        </routeDistribution>
+    </vehicle>
+    <vehicle id="veh1" depart="3.00">
+        <routeDistribution last="0">
+            <route cost="35.69" probability="1.00000000" edges="375935044 474362277 375935041 -4588222_1 168935757_1 -47755711_2 47755711_2"/>
+        </routeDistribution>
+    </vehicle>
+</routes>

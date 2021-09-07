@@ -1,0 +1,441 @@
+#VRML_SIM R2021b utf8
+WorldInfo {
+  ERP 0.6
+  basicTimeStep 20
+  coordinateSystem "NUE"
+  lineScale 5
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "CitroenCZeroWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "ToyotaPriusWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "LincolnMKZWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "RangeRoverSportSVRWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "TruckWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.16151142045882635 -0.9295752783312649 -0.331366659422344 2.4961740807171258
+  position -37.844788014407385 55.44174987043864 -87.15250731425827
+  near 0.5
+  far 2000
+  follow "vehicle1"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Fog {
+  color 0.396078431372549 0.396078431372549 0.396078431372549
+  visibilityRange 700
+}
+RoadIntersection {
+  rotation 0 1 0 0.7854
+  roadsWidth 16
+  startRoadsLength [
+    56
+  ]
+  startRoadsNumberOfLanes 4
+}
+RoadIntersection {
+  translation 100 0 0
+  rotation 0 1 0 0.7854
+  name "road intersection(1)"
+  roadsWidth 16
+  startRoadsLength [
+    55
+  ]
+  startRoadsNumberOfLanes 4
+}
+RoadIntersection {
+  translation 0 0 100
+  rotation 0 1 0 0.7854
+  name "road intersection(2)"
+  roadsWidth 16
+  startRoadsLength [
+    55
+  ]
+  startRoadsNumberOfLanes 4
+}
+RoadIntersection {
+  translation 100 0 100
+  rotation 0 1 0 0.7854
+  name "road intersection(3)"
+  roadsWidth 16
+  startRoadsLength [
+    55
+  ]
+  startRoadsNumberOfLanes 4
+}
+Floor {
+  translation 0 -0.01 0
+  size 1000 1000
+  tileSize 2 2
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2021b/projects/vehicles/worlds/textures/ground.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+TeslaModel3 {
+  translation 1.5 0.262553 -61.6118
+  rotation -1 -1.1215397201428008e-11 2.012416086620664e-09 0.006570158204947209
+  name "vehicle1"
+  controller "tcpip_simple_street_controller"
+  sensorsSlotFront [
+    DEF FRONT DistanceSensor {
+      translation 0 -0.08 -0.06
+      rotation 0 1 0 -1.5707953071795862
+      name "distance sensor front"
+      lookupTable [
+        0 0 0
+        20 20 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_RIGHT_0 DistanceSensor {
+      translation -0.7 -0.08 -0.2
+      rotation 0 1 0 -1.7016950010791607
+      name "distance sensor front right 0"
+      lookupTable [
+        0 0 0
+        20 20 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_RIGHT_1 DistanceSensor {
+      translation -0.7 -0.08 -0.2
+      rotation 0 1 0 -1.8325953071795862
+      name "distance sensor front right 1"
+      lookupTable [
+        0 0 0
+        15 15 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_RIGHT_2 DistanceSensor {
+      translation -0.7 -0.08 -0.2
+      rotation 0 1 0 -1.9634953071795866
+      name "distance sensor front right 2"
+      lookupTable [
+        0 0 0
+        10 10 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_LEFT_0 DistanceSensor {
+      translation 0.7 -0.08 -0.2
+      rotation 0 1 0 -1.4398953071795866
+      name "distance sensor front left 0"
+      lookupTable [
+        0 0 0
+        20 20 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_LEFT_1 DistanceSensor {
+      translation 0.7 -0.08 -0.2
+      rotation 0 1 0 -1.3089953071795861
+      name "distance sensor front left 1"
+      lookupTable [
+        0 0 0
+        15 15 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_LEFT_2 DistanceSensor {
+      translation 0.7 -0.08 -0.2
+      rotation 0 1 0 -1.1780953071795865
+      name "distance sensor front left 2"
+      lookupTable [
+        0 0 0
+        15 15 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+  ]
+  sensorsSlotRear [
+    DEF REAR DistanceSensor {
+      translation 0 0.3 0
+      rotation 0 1 0 -1.5707953071795862
+      name "distance sensor rear"
+      lookupTable [
+        0 0 0
+        10 10 0
+      ]
+      numberOfRays 2
+      aperture 0.2
+    }
+    DEF REAR_LEFT DistanceSensor {
+      translation -0.7 0.3 -0.188938
+      rotation 0 1 0 -2.094395307179586
+      name "distance sensor rear left"
+      lookupTable [
+        0 0 0
+        10 10 0
+      ]
+      numberOfRays 2
+      aperture 0.2
+    }
+    DEF REAR_RIGHT DistanceSensor {
+      translation 0.7 0.3 -0.188938
+      rotation 0 -1 0 1.0472
+      name "distance sensor rear right"
+      lookupTable [
+        0 0 0
+        10 10 0
+      ]
+      numberOfRays 2
+      aperture 0.2
+    }
+  ]
+  sensorsSlotCenter [
+    DEF RIGHT DistanceSensor {
+      translation 0.9 0.3 -1.32
+      name "distance sensor right"
+      lookupTable [
+        0 0 0
+        4 4 0
+      ]
+      numberOfRays 2
+      aperture 0.9
+    }
+    DEF LEFT DistanceSensor {
+      translation -0.9 0.3 -1.32
+      rotation 0 1 0 3.14159
+      name "distance sensor left"
+      lookupTable [
+        0 0 0
+        4 4 0
+      ]
+      numberOfRays 2
+      aperture 0.9
+    }
+    GPS {
+    }
+  ]
+}
+TeslaModel3 {
+  translation 5.79044 0.260776 -56.8821
+  rotation -0.99999922242003 -0.0012470602773713999 2.397450533241434e-09 0.0065702
+  color 0.3 0.7 0.4
+  name "vehicle2"
+  controller "tcpip_simple_street_controller2"
+  sensorsSlotFront [
+    DEF FRONT DistanceSensor {
+      translation 0 -0.08 -0.06
+      rotation 0 1 0 -1.5707953071795862
+      name "distance sensor front"
+      lookupTable [
+        0 0 0
+        20 20 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_RIGHT_0 DistanceSensor {
+      translation -0.7 -0.08 -0.2
+      rotation 0 1 0 -1.7016950010791607
+      name "distance sensor front right 0"
+      lookupTable [
+        0 0 0
+        20 20 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_RIGHT_1 DistanceSensor {
+      translation -0.7 -0.08 -0.2
+      rotation 0 1 0 -1.8325953071795862
+      name "distance sensor front right 1"
+      lookupTable [
+        0 0 0
+        15 15 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_RIGHT_2 DistanceSensor {
+      translation -0.7 -0.08 -0.2
+      rotation 0 1 0 -1.9634953071795866
+      name "distance sensor front right 2"
+      lookupTable [
+        0 0 0
+        10 10 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_LEFT_0 DistanceSensor {
+      translation 0.7 -0.08 -0.2
+      rotation 0 1 0 -1.4398953071795866
+      name "distance sensor front left 0"
+      lookupTable [
+        0 0 0
+        20 20 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_LEFT_1 DistanceSensor {
+      translation 0.7 -0.08 -0.2
+      rotation 0 1 0 -1.3089953071795861
+      name "distance sensor front left 1"
+      lookupTable [
+        0 0 0
+        15 15 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+    DEF FRONT_LEFT_2 DistanceSensor {
+      translation 0.7 -0.08 -0.2
+      rotation 0 1 0 -1.1780953071795865
+      name "distance sensor front left 2"
+      lookupTable [
+        0 0 0
+        15 15 0
+      ]
+      numberOfRays 2
+      aperture 0.1
+    }
+  ]
+  sensorsSlotRear [
+    DEF REAR DistanceSensor {
+      translation 0 0.3 0
+      rotation 0 1 0 -1.5707953071795862
+      name "distance sensor rear"
+      lookupTable [
+        0 0 0
+        10 10 0
+      ]
+      numberOfRays 2
+      aperture 0.2
+    }
+    DEF REAR_LEFT DistanceSensor {
+      translation -0.7 0.3 -0.188938
+      rotation 0 1 0 -2.094395307179586
+      name "distance sensor rear left"
+      lookupTable [
+        0 0 0
+        10 10 0
+      ]
+      numberOfRays 2
+      aperture 0.2
+    }
+    DEF REAR_RIGHT DistanceSensor {
+      translation 0.7 0.3 -0.188938
+      rotation 0 -1 0 1.0472
+      name "distance sensor rear right"
+      lookupTable [
+        0 0 0
+        10 10 0
+      ]
+      numberOfRays 2
+      aperture 0.2
+    }
+  ]
+  sensorsSlotCenter [
+    DEF RIGHT DistanceSensor {
+      translation 0.9 0.3 -1.32
+      name "distance sensor right"
+      lookupTable [
+        0 0 0
+        4 4 0
+      ]
+      numberOfRays 2
+      aperture 0.9
+    }
+    DEF LEFT DistanceSensor {
+      translation -0.9 0.3 -1.32
+      rotation 0 1 0 3.14159
+      name "distance sensor left"
+      lookupTable [
+        0 0 0
+        4 4 0
+      ]
+      numberOfRays 2
+      aperture 0.9
+    }
+    GPS {
+    }
+  ]
+}
+ToyotaPriusSimple {
+  translation -1.95 0.4 -17.12
+  color 0.6 0.47 0.92
+  name "vehicle(1)"
+}
+ToyotaPriusSimple {
+  translation 5.69 0.4 58.08
+  color 0.6 0.47 0.92
+  name "vehicle(2)"
+}
+ToyotaPriusSimple {
+  translation 1.43 0.4 123.93
+  color 0.6 0.47 0.92
+  name "vehicle(3)"
+}
